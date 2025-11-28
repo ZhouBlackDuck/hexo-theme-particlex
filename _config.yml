@@ -63,6 +63,10 @@ math:
 preview:
     enable: true
 
+# TOC sidebar
+toc:
+    enable: true
+
 # Article encryption
 crypto:
     enable: false

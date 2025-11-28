@@ -53,6 +53,11 @@
 <% if (type === "index") { %>
     <script src="<%- url_for("/js/lib/home.js") %>"></script>
 <% } %>
+<% if (type === "post" && theme.toc && theme.toc.enable) { %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js"></script>
+    <script src="<%- url_for("/js/lib/toc.js") %>"></script>
+<% } %>
 <link rel="stylesheet" href="<%- url_for("/css/main.css") %>"/>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/element-plus/dist/index.css"/>
 <script src="//cdn.jsdelivr.net/npm/element-plus"></script>

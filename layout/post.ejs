@@ -1,3 +1,17 @@
+<% if (theme.toc && theme.toc.enable) { %>
+<aside id="toc-sidebar" :class="{ 'is-open': tocOpen }">
+    <div class="toc-content adaptive-visibility">
+        <div class="toc-header">
+            <i class="fa-solid fa-list-ul"></i>
+            <span>目录</span>
+        </div>
+        <nav class="toc"></nav>
+    </div>
+    <button id="toc-trigger" @click="tocOpen = !tocOpen" :class="{ 'is-open': tocOpen }" class="adaptive-visibility">
+        <i class="fa-solid fa-angle-right"></i>
+    </button>
+</aside>
+<% } %>
 <div class="article">
     <div>
         <h1><%= page.title %></h1>
